@@ -1,12 +1,15 @@
 import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider } from 'react-router-dom'
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import Homecards from './components/Homecards'
-import JobListings from './components/JobListings'
-import ViewAllJobs from './components/ViewAllJobs'
+import Homepage from './pages/HomePage'
+import MainLayout from './layout/Main'
+import JobsPage from './layout/Jobs'
 
 const router = createBrowserRouter(
-  createRoutesFromElements(<Route index element={<h1>My App</h1>} />)
+  createRoutesFromElements(
+    <Route path='/' element={<MainLayout />}>
+      <Route index element={<Homepage />} />  
+      <Route path='/jobs' element={<JobsPage />} />  
+    </Route >
+  )
 );
 
 
