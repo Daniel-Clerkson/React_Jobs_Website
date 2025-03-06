@@ -1,1 +1,1 @@
-# This Is A Website MAde with ReactJs and TailwindCSs
+# This Is A Website MAde with ReactJs and TailwindCSS
